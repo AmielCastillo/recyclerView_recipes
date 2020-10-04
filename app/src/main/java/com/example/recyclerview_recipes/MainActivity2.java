@@ -18,14 +18,14 @@ public class MainActivity2 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
-        getData();
-        setData();
         recipePic = findViewById(R.id.recipePic);
         title = findViewById(R.id.recipeTitle);
         information = findViewById(R.id.recipeInformation);
+        getData();
+        setData();
     }
     private void getData(){
-        if (getIntent().hasExtra("myImage") && getIntent().hasExtra("data1") && getIntent().hasExtra("data2"))
+        if (getIntent().hasExtra("data1") && getIntent().hasExtra("data2") && getIntent().hasExtra("myImage"))
         {
             data1 = getIntent().getStringExtra("data1");
             myImage = getIntent().getIntExtra("myImage", 1);

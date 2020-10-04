@@ -9,39 +9,28 @@
     android:divider="@android:drawable/bottom_bar"
     android:orientation="vertical">
 
-    <androidx.cardview.widget.CardView
+    <TextView
+        android:id="@+id/recipeName1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:paddingTop="10dp"
+        android:textColor="#000000"
+        android:textSize="15sp"
+        android:textStyle="bold"></TextView>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+    <TextView
+        android:id="@+id/recipeDescription1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        android:textSize="15sp"></TextView>
 
-            <TextView
-                android:id="@+id/recipeName1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:paddingTop="10dp"
-                android:textColor="#000000"
-                android:textSize="15sp"
-                android:textStyle="bold"></TextView>
-
-            <TextView
-                android:id="@+id/recipeDescription1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingBottom="10dp"
-                android:textSize="15sp"></TextView>
-
-            <View
-                android:id="@+id/line"
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@android:color/darker_gray"
-                android:paddingBottom="40dp" />
-        </LinearLayout>
-    </androidx.cardview.widget.CardView>
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        android:paddingBottom="40dp" />
 
 </LinearLayout>
