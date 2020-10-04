@@ -13,14 +13,16 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
 public class RecipeListAdapter extends RecyclerView.Adapter<RecipeListAdapter.MyViewHolder> {
-    String data1[], data2[];
+    String data1[], data2[], data3[], data4[];
     int images[];
     Context context;
     private final LayoutInflater inflater;
-    public RecipeListAdapter(Context c, String[] s1, String[] s2, int img[]){
+    public RecipeListAdapter(Context c, String[] s1, String[] s2, String[] s3, String[] s4, int img[]){
         context = c;
         data1 = s1;
         data2 = s2;
+        data3 = s3;
+        data4 = s4;
         images = img;
         inflater = LayoutInflater.from(c);
     }
@@ -41,7 +43,8 @@ public class RecipeListAdapter extends RecyclerView.Adapter<RecipeListAdapter.My
             public void onClick(View v) {
                 Intent intent = new Intent(context, MainActivity2.class);
                 intent.putExtra("data1", data1[position]);
-                intent.putExtra("data2", data2[position]);
+                intent.putExtra("data3", data3[position]);
+                intent.putExtra("data4", data4[position]);
                 intent.putExtra("myImage", images[position]);
                 context.startActivity(intent);
             }

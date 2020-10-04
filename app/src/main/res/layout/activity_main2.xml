@@ -12,6 +12,7 @@
         android:layout_height="348dp"
         android:layout_marginTop="108dp"
         android:contentDescription="@string/food"
+        android:paddingBottom="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -33,7 +34,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/recipeInformation"
+        android:id="@+id/recipeIngredients"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:paddingBottom="10dp"
@@ -45,5 +46,16 @@
         app:layout_constraintStart_toStartOf="@+id/recipePic"
         app:layout_constraintTop_toBottomOf="@+id/recipePic"
         app:layout_constraintVertical_bias="0.065" />
+
+    <TextView
+        android:id="@+id/recipeProcedure"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/recipeIngredients"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/recipeIngredients"
+        app:layout_constraintTop_toBottomOf="@+id/recipeIngredients"
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

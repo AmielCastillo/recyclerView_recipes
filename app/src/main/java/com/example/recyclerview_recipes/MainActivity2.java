@@ -10,9 +10,9 @@ import android.widget.Toast;
 public class MainActivity2 extends AppCompatActivity {
 
     ImageView recipePic;
-    TextView title, information;
+    TextView title, ingredients, procedure;
 
-    String data1, data2;
+    String data1, data3, data4;
     int myImage;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,14 +20,17 @@ public class MainActivity2 extends AppCompatActivity {
         setContentView(R.layout.activity_main2);
         recipePic = findViewById(R.id.recipePic);
         title = findViewById(R.id.recipeTitle);
-        information = findViewById(R.id.recipeInformation);
+        ingredients = findViewById(R.id.recipeIngredients);
+        procedure = findViewById((R.id.recipeProcedure));
         getData();
         setData();
     }
     private void getData(){
-        if (getIntent().hasExtra("data1") && getIntent().hasExtra("data2") && getIntent().hasExtra("myImage"))
+        if (getIntent().hasExtra("data1") && getIntent().hasExtra("data3") && getIntent().hasExtra("data4") && getIntent().hasExtra("myImage"))
         {
             data1 = getIntent().getStringExtra("data1");
+            data3 = getIntent().getStringExtra("data3");
+            data4 = getIntent().getStringExtra("data4");
             myImage = getIntent().getIntExtra("myImage", 1);
 
         } else {
@@ -36,7 +39,8 @@ public class MainActivity2 extends AppCompatActivity {
     }
     private void setData(){
         title.setText(data1);
-        information.setText("Ingredients...\n- filler text\n- filler text\n- filler text\n\nProcedure...\n- filler text\n- filler text\n- filler text");
+        ingredients.setText("Ingredients: \n"+data3);
+        procedure.setText("Procedure: \n" + data4);
         recipePic.setImageResource(myImage);
     }
 }
